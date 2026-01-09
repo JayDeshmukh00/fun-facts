@@ -2,90 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Fun Hub 😄</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cat Facts</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 20px;
-            width: 350px;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-
-        h1 {
-            margin-bottom: 10px;
-        }
-
-        img {
-            width: 120px;
-            margin: 15px 0;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0); }
-        }
-
-        button {
-            background: #ffcc70;
-            color: #333;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 25px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 15px;
-        }
-
-        button:hover {
-            background: #ffd98e;
-            transform: scale(1.05);
-        }
-
-        #content {
-            margin-top: 20px;
-            font-size: 15px;
-            line-height: 1.5;
-            background: rgba(0,0,0,0.2);
-            padding: 15px;
-            border-radius: 12px;
-            min-height: 60px;
-        }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-
     <div class="card">
-        <h1>🐾 Cat Facts</h1>
+        <h1>🎉 Fun Hub</h1>
+        <p>Your daily dose of fun</p>
 
-        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="cat">
+        <div class="buttons">
+            <button onclick="catFact()">🐾 Cat</button>
+            <button onclick="dogFact()">🐶 Dog</button>
+            <button onclick="joke()">😂 Joke</button>
+            <button onclick="marathiJoke()">😹 Marathi</button>
+            <button onclick="crazyFact()">🤯 Crazy</button>
+            <button onclick="showNostalgia()">📼 Nostalgia</button>
+            <button onclick="retroMusic()">🎵 Retro</button>
+            <button onclick="oldGames()">🎮 Games</button>
+            <button onclick="challenge()">🎯 Challenge</button>
+            <button onclick="saveFav()">❤️ Save</button>
+        </div>
 
-        <button id="btn">Get New Fact</button>
+        <div id="content">
+            Click any button and enjoy 🚀
+        </div>
 
-        <p id="content">Click the button to learn something amazing about cats!</p>
+        <button class="toggle" onclick="toggleTheme()">🌙 Toggle Theme</button>
     </div>
 
-    <!-- Axios CDN -->
+    <!-- Sounds -->
+    <audio id="clickSound" src="click.mp3"></audio>
+    <audio id="successSound" src="success.mp3"></audio>
+
+    <!-- Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="app.js"></script>
+
+    <!-- JS -->
+    <script src="./app.js"></script>
 </body>
 </html>
